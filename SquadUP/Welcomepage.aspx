@@ -18,8 +18,9 @@
                     <asp:TextBox ID="emailLogin" runat="server"></asp:TextBox>
                     <p>Password</p>
                     <asp:TextBox ID="passwordLogin" runat="server"></asp:TextBox>
-                
+                    <asp:Button ID="SignIn" runat="server" Text="Sign-In" />
                 </div>
+                
             </div>
 
             <div class="section">
@@ -37,8 +38,9 @@
                     Last Name
                     <asp:TextBox ID="LastNameRegistry" runat="server"></asp:TextBox>
                     <br />
-                    Phone Number
-                    <asp:TextBox ID="PhoneNumberRegistry" runat="server"></asp:TextBox>
+                    Date of birth 
+                    <asp:TextBox ID="DateOfBirth" runat="server"></asp:TextBox>
+                    <br />
                     <br />
                     Password
                     <asp:TextBox ID="PasswordRegistry" runat="server"></asp:TextBox>
@@ -47,8 +49,23 @@
                     <asp:TextBox ID="ConfirmPasswordRegistry" runat="server"></asp:TextBox>
                     <br />
                     Gender
-                    <asp:DropDownList ID="GenderList" runat="server"></asp:DropDownList>
+                    <asp:DropDownList ID="GenderList" runat="server">
+                        
+                    <asp:ListItem value="male" selected="False">
+                        Male
+                    </asp:ListItem>
+                    <asp:ListItem value="female" selected="False">
+                        Female
+                    </asp:ListItem>
+                        <asp:ListItem value="Unicorn" selected="False">
+                        Unicorn
+                    </asp:ListItem>
+                        <asp:ListItem value="Other" selected="False">
+                        Other
+                    </asp:ListItem>
+                    </asp:DropDownList>
 
+                    <asp:Button ID="register" runat="server" Text="Register" OnClick="register_Click" />
 
                 </div>
             </div>
