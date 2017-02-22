@@ -1,4 +1,6 @@
-﻿body {background-color:#564D4a;}
+﻿body {background-color:#564D4a;
+      font-family: "Trebuchet MS", Helvetica, sans-serif;
+}
 
 /*Class Styles*/
 .header {background-color:#f24333;
@@ -20,21 +22,58 @@
           box-shadow: #ba1b1d 5px 5px;
 }
 
+
+
 /*ID Styles*/
 
 #loginForm {background-color: white;
-            height: 50px;
-            width: 500px;
             position: fixed;
             top: 25px;
             right: 100px;
+            border-radius: 10px;
+            padding:10px;
 }
+
 
 #signUpForm{
               height: 100%;
               width: 45%;
               position: fixed;
-              top: 0px;
-              left: 15%;
+              top: 300px;
+              right: 0px;
 
+}
+
+#signUpFirstName{ width:150px;
+                  position: fixed;
+                  padding:5px;
+}
+#signUpLastName { width:150px;
+                  position: fixed;                  
+                  right: 146px;
+                  padding:5px;
+}
+#signUpEmail { width:315px;
+               position:fixed;
+               top:425px;
+               padding: 5px;
+}
+#signUpPassword { width:315px;
+                  position:fixed;
+                  top:470px;
+                  padding:5px;
+}
+#signUpConfirmPassword { width: 315px;
+                         position: fixed;
+                         top: 515px;
+                         padding: 5px;
+}
+
+/*Input Styles*/
+input[type=text], select {
+    padding: 5px;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
 }

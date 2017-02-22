@@ -14,11 +14,9 @@
                 </div>
 
                 <div id="loginForm">
-                    <p>Email</p>
-                    <asp:TextBox ID="emailLogin" runat="server"></asp:TextBox>
-                    <p>Password</p>
-                    <asp:TextBox ID="passwordLogin" runat="server"></asp:TextBox>
-                
+                    <asp:TextBox ID="emailLogin" class="loginField" runat="server" Text="E-Mail"></asp:TextBox>  
+                    <asp:TextBox ID="passwordLogin" class="loginField" runat="server" Text="Password"></asp:TextBox>
+                    <asp:Button ID="login" runat="server" Text="Login" />
                 </div>
             </div>
 
@@ -28,28 +26,13 @@
                 </div>
                 
                 <div id="signUpForm">
-                    Email
-                    <asp:TextBox ID="EmailRegistry" runat="server"></asp:TextBox>
-                    <br />
-                    First Name
-                    <asp:TextBox ID="FirstNameRegistry" runat ="server"></asp:TextBox>
-                    <br />
-                    Last Name
-                    <asp:TextBox ID="LastNameRegistry" runat="server"></asp:TextBox>
-                    <br />
-                    Phone Number
-                    <asp:TextBox ID="PhoneNumberRegistry" runat="server"></asp:TextBox>
-                    <br />
-                    Password
-                    <asp:TextBox ID="PasswordRegistry" runat="server"></asp:TextBox>
-                    <br />
-                    Confirm Password 
-                    <asp:TextBox ID="ConfirmPasswordRegistry" runat="server"></asp:TextBox>
-                    <br />
-                    Gender
-                    <asp:DropDownList ID="GenderList" runat="server"></asp:DropDownList>
-
-
+                    <h1>Join Today, It's Free!</h1>
+                    <asp:TextBox ID="signUpFirstName" runat ="server" Text="First name"></asp:TextBox>                    
+                    <asp:TextBox ID="signUpLastName" runat="server" Text="Last name"></asp:TextBox> 
+                    <asp:TextBox ID="signUpEmail" runat="server" Text="E-Mail"></asp:TextBox>             
+                    <asp:TextBox ID="signUpPassword" runat="server" Text="Password"></asp:TextBox>                
+                    <asp:TextBox ID="signUpConfirmPassword" runat="server" Text="Confirm Password"></asp:TextBox>
+                    <asp:DropDownList ID="signUpGenderList" runat="server"></asp:DropDownList>
                 </div>
             </div>
         </form>
