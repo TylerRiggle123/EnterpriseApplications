@@ -10,29 +10,41 @@
         <form id="welcomPage" runat="server">
             <div class="header">
                 <div class="headerImage">
-
+                    <h1>Squad UP</h1>
                 </div>
 
                 <div id="loginForm">
-                    <asp:TextBox ID="emailLogin" class="loginField" runat="server" Text="E-Mail"></asp:TextBox>  
-                    <asp:TextBox ID="passwordLogin" class="loginField" runat="server" Text="Password"></asp:TextBox>
+                    <asp:TextBox ID="emailLogin" class="loginField" runat="server" placeholder="E-Mail"></asp:TextBox>  
+                    <asp:TextBox ID="passwordLogin" class="loginField" runat="server" placeholder="Password"></asp:TextBox>
                     <asp:Button ID="login" runat="server" Text="Login" />
                 </div>
             </div>
 
             <div class="section">
                 <div id="welcomMessage">
-                    <p> BOX</p>
+                    <h3>"You'll Bounce Back"</h3>
+                    <ul>
+                        <li>Connect with old and new friends!</li>
+                        <li>Get a squad together and post stupid memes!</li>
+                        <li>Some third thing!</li>
+                    </ul>
                 </div>
                 
                 <div id="signUpForm">
                     <h1>Join Today, It's Free!</h1>
-                    <asp:TextBox ID="signUpFirstName" runat ="server" Text="First name"></asp:TextBox>                    
-                    <asp:TextBox ID="signUpLastName" runat="server" Text="Last name"></asp:TextBox> 
-                    <asp:TextBox ID="signUpEmail" runat="server" Text="E-Mail"></asp:TextBox>             
-                    <asp:TextBox ID="signUpPassword" runat="server" Text="Password"></asp:TextBox>                
-                    <asp:TextBox ID="signUpConfirmPassword" runat="server" Text="Confirm Password"></asp:TextBox>
-                    <asp:DropDownList ID="signUpGenderList" runat="server"></asp:DropDownList>
+                    <asp:TextBox ID="signUpFirstName" runat ="server" placeholder="First name"></asp:TextBox>                    
+                    <asp:TextBox ID="signUpLastName" runat="server" placeholder="Last name"></asp:TextBox> 
+                    <asp:TextBox ID="signUpEmail" runat="server" placeholder="E-Mail"></asp:TextBox>             
+                    <asp:TextBox ID="signUpPassword" runat="server" placeholder="Password"></asp:TextBox>                
+                    <asp:TextBox ID="signUpBirthdate" runat="server" placeholder="MM/DD/YYYY"></asp:TextBox>
+                    <asp:DropDownList ID="signUpGenderList" runat="server">
+                        <asp:ListItem value="" selected="True">Gender</asp:ListItem>
+                        <asp:ListItem Value="Male"></asp:ListItem>
+                        <asp:ListItem Value="Female"></asp:ListItem>
+                        <asp:ListItem Value="Unicorn"></asp:ListItem>
+                        <asp:ListItem Value="Other"></asp:ListItem>
+                    </asp:DropDownList>
+                    <asp:Button ID="signUp" runat="server" Text="Sign Up" />
                 </div>
             </div>
         </form>
