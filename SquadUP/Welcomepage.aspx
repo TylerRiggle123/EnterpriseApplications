@@ -18,7 +18,7 @@
                     <asp:TextBox ID="emailLogin" runat="server"></asp:TextBox>
                     <p>Password</p>
                     <asp:TextBox ID="passwordLogin" runat="server"></asp:TextBox>
-                    <asp:Button ID="SignIn" runat="server" Text="Sign-In" />
+                    <asp:Button ID="SignIn" runat="server" Text="Sign-In" OnClick="SignIn_Click" />
                 </div>
                 
             </div>

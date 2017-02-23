@@ -23,7 +23,7 @@ public partial class Welcomepage : System.Web.UI.Page
 
         
 
-        string registerSql = "insert into [User] values ('"+password+"','"+userEmail+"','"+firstName+"','"+lastName+"','"+gender+"','"+dateOfBirth+")";
+        string registerSql = "insert into [User] values ('"+password+"','"+userEmail+"','"+firstName+"','"+lastName+"','"+gender+"','"+dateOfBirth+"NULL,NULL)";
 
         try
         {
@@ -44,7 +44,7 @@ public partial class Welcomepage : System.Web.UI.Page
 
     }
 
-    protected bool SignIn_Click(object sender, EventArgs e)
+    protected void SignIn_Click(object sender, EventArgs e)
     {
         string userEmailLogIn = ((TextBox)emailLogin.FindControl("emailLogin")).Text;
         string passwordLogIn = ((TextBox)passwordLogin.FindControl("passwordLogin")).Text;
@@ -74,6 +74,6 @@ public partial class Welcomepage : System.Web.UI.Page
         {
 
         }
-        return valid;
+        
     }
 }
