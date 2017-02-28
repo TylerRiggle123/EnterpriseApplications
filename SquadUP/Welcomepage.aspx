@@ -32,11 +32,11 @@
                 
                 <div id="signUpForm">
                     <h1>Join Today, It's Free!</h1>
-                    <asp:TextBox ID="signUpFirstName" runat ="server" placeholder="First name"></asp:TextBox>                    
-                    <asp:TextBox ID="signUpLastName" runat="server" placeholder="Last name"></asp:TextBox> 
-                    <asp:TextBox ID="signUpEmail" runat="server" placeholder="E-Mail"></asp:TextBox>             
-                    <asp:TextBox ID="signUpPassword" runat="server" placeholder="Password"></asp:TextBox>                
-                    <asp:TextBox ID="signUpBirthdate" runat="server" placeholder="MM/DD/YYYY"></asp:TextBox>
+                    <asp:TextBox ID="FirstNameRegistry" runat ="server" placeholder="First name"></asp:TextBox>                    
+                    <asp:TextBox ID="LastNameRegistry" runat="server" placeholder="Last name"></asp:TextBox> 
+                    <asp:TextBox ID="EmailRegistry" runat="server" placeholder="E-Mail"></asp:TextBox>             
+                    <asp:TextBox ID="PasswordRegistry" runat="server" placeholder="Password"></asp:TextBox>                
+                    <asp:TextBox ID="DateOfBirth" runat="server" placeholder="MM/DD/YYYY"></asp:TextBox>
                     <asp:DropDownList ID="signUpGenderList" runat="server">
                         <asp:ListItem value="" selected="True">Gender</asp:ListItem>
                         <asp:ListItem Value="Male"></asp:ListItem>
