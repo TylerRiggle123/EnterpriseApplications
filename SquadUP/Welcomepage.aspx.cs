@@ -39,41 +39,48 @@ public partial class Welcomepage : System.Web.UI.Page
         finally
         {
             conn.Close();
-            Response.Redirect("http://localhost:57510/Welcomepage.aspx");
+            Response.Redirect("Homepage.aspx");
         }
 
     }
 
     protected void SignIn_Click(object sender, EventArgs e)
     {
+        conn.Open();
         string userEmailLogIn = ((TextBox)emailLogin.FindControl("emailLogin")).Text;
         string passwordLogIn = ((TextBox)passwordLogin.FindControl("passwordLogin")).Text;
 
         bool valid = false;
         
-        string loginSQL = "SELECT COUNT FROM [User] WHERE Email = '" + userEmailLogIn + "' AND Password = '" + passwordLogin + "'";
+        string loginSQL = "SELECT COUNT(Email) FROM [User] WHERE Email = '" + userEmailLogIn + "' AND Password = '" + passwordLogIn + "'";
         
         SqlCommand cmd = new SqlCommand(loginSQL, conn);
         try
         {
-            
-            int rowCount = Convert.ToInt32(cmd.ExecuteScalar());
-            
+            string result;
+            result = cmd.ExecuteScalar().ToString();
+            int rowCount = Convert.ToInt32(result);
+
             if (rowCount >= 1)
             {
                 valid = true;
-                Response.Redirect("http://localhost:57510/Homepage.aspx");
+                Response.Redirect("Homepage.aspx");
             }
             else if (rowCount <= 0)
             {
                 valid = false;
-                Response.Redirect("http://localhost:57510/Welcomepage.aspx");
+                Response.Redirect("Welcomepage.aspx");
             }
         }
-        catch
+        catch (System.Data.SqlClient.SqlException ex)
         {
-
+            string msg = "Insert Error:";
+            msg += ex.Message;
         }
-        
+        finally
+        {
+            conn.Close();
+        }
+
     }
 }
