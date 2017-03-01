@@ -10,7 +10,7 @@ public partial class Welcomepage : System.Web.UI.Page
     SqlConnection conn = new SqlConnection(@"Data Source=stusql;Initial Catalog=SquadDatabase; Integrated Security=true");
     protected void register_Click(object sender, EventArgs e)
     {
-        //string registerSQLString;
+        
         string userEmail = ((TextBox)EmailRegistry.FindControl("EmailRegistry")).Text;
         string firstName = ((TextBox)FirstNameRegistry.FindControl("FirstNameRegistry")).Text;
         string lastName = ((TextBox)LastNameRegistry.FindControl("LastNameRegistry")).Text;
@@ -19,7 +19,7 @@ public partial class Welcomepage : System.Web.UI.Page
         string confirmPassword = ((TextBox)ConfirmPasswordRegistry.FindControl("ConfirmPasswordRegistry")).Text;
         string gender = ((DropDownList)GenderList.FindControl("GenderList")).Text;
 
-        //registerSQLString = userEmail + firstName + lastName + dateOfBirth + password + gender;
+        
 
         
 

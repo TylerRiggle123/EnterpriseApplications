@@ -8,9 +8,7 @@
 </head>
 <body>
     <form id="form1" runat="server">
-    <div>
-    Box
-    </div>
+    
     </form>
 </body>
 </html>
